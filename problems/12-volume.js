@@ -13,7 +13,14 @@ function returned by recVolume should continue to return the original volume.
 
 ***********************************************************************/
 
-// Your code here 
+const recVolume = (height) => {
+  let product = 1
+  for (let i = 0; i < 2; i++) {
+    return function(num) {
+      return product *= num
+    }    
+  } return product * height
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

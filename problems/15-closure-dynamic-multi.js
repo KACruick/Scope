@@ -18,7 +18,11 @@ multiplyByFive(5); // returns 25
 
 ***********************************************************************/
 
-// Your code here 
+const dynamicMultiply = (num) => {
+  return function (number) {
+    return num * number;
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

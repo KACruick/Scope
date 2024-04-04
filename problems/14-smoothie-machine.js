@@ -22,7 +22,18 @@ console.log(smoothie2("pineapple"));
 // prints "I'm having a smoothie with apples and bananas and berries and pineapple"
 ***********************************************************************/
 
-// Your code here 
+const smoothieMachine = () => {
+  let smoothie = "I'm having a smoothie with "
+
+  return function(ing, ...others) {
+    if(others !== true) {
+      return smoothie = smoothie + ing
+    }
+    else {
+      return smoothie = smoothie + ing + " and " + others
+    }
+  }
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {

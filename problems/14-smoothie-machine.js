@@ -26,7 +26,7 @@ const smoothieMachine = () => {
   let smoothie = "I'm having a smoothie with "
 
   return function(ing, ...others) {
-    if(others !== true) {
+    if(others === undefined) {
       return smoothie = smoothie + ing
     }
     else {

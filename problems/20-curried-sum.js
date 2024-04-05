@@ -44,24 +44,28 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 ***********************************************************************/
 
 const curriedSum = (numArgs) => {
+  if (numArgs <= 0) {
+    return null
+  }
+
   let numbers = []
   let sum = 0
 
-  return function _curriedSum(num) {
-    if (num <= 0) {
-      return null
-    } 
-
+  function _curriedSum(num) {
+    
     numbers.push(num)
 
     if (numbers.length === numArgs) {
       for (let i = 0; i < numbers.length; i++) {
         sum += numbers[i]
-      } return sum  
+      } 
+      return sum  
+    } else {
+      return _curriedSum
     }
-
-    else return _curriedSum()
+    
   } 
+  return _curriedSum
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

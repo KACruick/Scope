@@ -33,8 +33,6 @@ const coinCollector = (numsCoins) => {
         result.push(num);
         return result;
       }
-      return function () {};
-      
     }
   }
   return result;
